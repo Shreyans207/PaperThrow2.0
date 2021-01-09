@@ -20,11 +20,6 @@ function setup() {
   dustbin = new Dustbin(1000,height-130 ,150,150);
 
   ground= new Ground(width/2, height-50, width,10,);
-  
-
-  Box1 = new Box(width/2 , height-50 , 200 , 10);
-	Box2 = new Box( 930 , height-130 , 10 , 140);
-	Box3 = new Box(1070, height-130 , 10 , 140);
 
 	Engine.run(engine);
 }
@@ -35,15 +30,12 @@ function draw() {
   background(255);
   paper.display();
   ground.display();
-  Box1.display();
-  Box2.display();
-  Box3.display();
   dustbin.display();
   }
 
 function keyPressed(){
      if(keyCode === UP_ARROW){
-     Matter.Body.applyForce(paper.body, paper.body.position,{x:100,y:-100})
+     Matter.Body.applyForce(paper.body, paper.body.position,{x:1100,y:-1100})
 	 }
 
 }
