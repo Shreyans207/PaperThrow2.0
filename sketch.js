@@ -17,7 +17,7 @@ function setup() {
 
   paper = new Paper(100,height-70,70);
   
-  dustbin = new Dustbin(1000,height-130 ,150,150);
+  Dustbin = new dustbin(1000,height-70 ,150,150);
 
   ground= new Ground(width/2, height-50, width,10,);
 
@@ -30,12 +30,12 @@ function draw() {
   background(255);
   paper.display();
   ground.display();
-  dustbin.display();
+  Dustbin.display();
   }
 
 function keyPressed(){
      if(keyCode === UP_ARROW){
-     Matter.Body.applyForce(paper.body, paper.body.position,{x:1100,y:-1100})
+     Matter.Body.applyForce(paper.body, paper.body.position,{x:250,y:-300})
 	 }
 
 }
